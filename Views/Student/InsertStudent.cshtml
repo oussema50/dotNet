@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "InsertStudent";
+}
+
+<h2>InsertStudent</h2>
+
+@using (Html.BeginForm("InsertStudent", "Student", FormMethod.Post))
+{
+    <input type="text" placeholder="student name" name="studentName" />
+    <input type="number" placeholder="student number" name="studentNbr" />
+    <input type="submit" value="submit" />
+}
+

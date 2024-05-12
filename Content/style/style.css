@@ -1,0 +1,26 @@
+﻿body {
+
+}
+
+a{
+    color:white;
+    text-decoration:none;
+}
+a:hover{
+    color:white;
+}
+.room_header
+{
+    display:flex;
+    width:500px;
+    justify-content:space-between;
+    align-items:center;
+}
+.list_link{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.list_link li a{
+    padding:5px 15px;
+}

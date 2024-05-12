@@ -1,0 +1,17 @@
+﻿
+
+@model projetDotNet.Models.Course
+
+
+<h2>UpdateCourse</h2>
+
+@using (Html.BeginForm("UpdateCourse", "Course", FormMethod.Post))
+{
+    <input type="text" placeholder="Course name" name="courseName" value="@Model.courseName" />
+    <select value="@Model.isAvailable" name="isAvailable">
+        <option>true</option>
+        <option>false</option>
+    </select>
+    <br />
+    <input type="submit" value="submit" />
+}

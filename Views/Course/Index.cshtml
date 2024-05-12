@@ -1,0 +1,35 @@
+﻿
+@model List<projetDotNet.Models.Course>
+
+<h2>All Course</h2>
+<button class="btn btn-primary"><a href="/Course/InsertCourse">add course</a></button>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">CouseId</th>
+            <th scope="col">Course Name</th>
+            <th scope="col">IsAvaliable</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">@item.courseID</th>
+                <td>@item.courseName</td>
+                <td>@item.isAvailable</td>
+                <td>
+                    <button class="btn btn-success"><a href="/course/UpdateCourse/@item.courseID">Update</a></button>
+                    <button class="btn btn-danger"><a href="/course/DeleteCourse/@item.courseID">Delete</a></button>
+                    <button class="btn btn-primary"><a href="/reserve/ReserveCourse/@item.courseID">reserve</a></button>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+
+
+

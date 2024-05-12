@@ -1,0 +1,11 @@
+﻿@model projetDotNet.Models.Teacher
+
+
+<h2>UpdateTeacher</h2>
+
+@using (Html.BeginForm("UpdateTeacher", "Teacher", FormMethod.Post))
+{
+    <input type="text" placeholder="teacher name" name="teacherName" value="@Model.teacherName" />
+    <input type="number" placeholder="teacher number" name="teacherNbr" value="@Model.teacherNbr" />
+    <input type="submit" value="submit" />
+}

@@ -1,0 +1,31 @@
+﻿
+@model List<projetDotNet.Models.Teacher>
+
+
+<h2>All Teacher</h2>
+<button class="btn btn-primary"><a href="/Teacher/InsertTeacher">add teacher</a></button>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">teacherId</th>
+            <th scope="col">Teacher Name</th>
+            <th scope="col">Teacher Number</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <th scope="row">@item.teacherID</th>
+                <td>@item.teacherName</td>
+                <td>@item.teacherNbr</td>
+                <td>
+                    <button class="btn btn-success"><a href="/Teacher/UpdateTeacher/@item.teacherID">Update</a></button>
+                    <button class="btn btn-danger"><a href="/Teacher/DeleteTeacher/@item.teacherID">Delete</a></button>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+    </table>
